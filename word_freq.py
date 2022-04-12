@@ -22,7 +22,8 @@ for i in lines:
 
 Sorted_dic=sorted(dic.items(),key=operator.itemgetter(1),reverse=True)
 
-print(Sorted_dic)
+for j in range(0,num,1):
+    print("%10s%10d" %(Sorted_dic[j][0],Sorted_dic[j][1]))
   
 
 f.close()
