@@ -9,18 +9,17 @@ num=int(sys.argv[2])
 print(sys.argv[1],sys.argv[2])
 
 f=open(txtf,'r')
+dic={}
 
 lines=f.readlines()
 
 for i in lines:
     i = re.sub("[-=+,#/\?:^.@*\"※~ㆍ!]", "", i) 
     words=i.split()
-    #for word in words:
+    for cnt in words:
+        dic[cnt]=dic.get(cnt,0)+1
 
-print(words)
-
-#for i in range(0,len(sep),1):
-   # if t_rmv in sep:
-        
+print(dic)
+  
 
 f.close()
