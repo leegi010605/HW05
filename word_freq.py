@@ -2,6 +2,7 @@
 
 import sys
 import re
+import operator
 
 txtf=str(sys.argv[1])
 num=int(sys.argv[2])
@@ -19,7 +20,9 @@ for i in lines:
     for cnt in words:
         dic[cnt]=dic.get(cnt,0)+1
 
-print(dic)
+Sorted_dic=sorted(dic.items(),key=operator.itemgetter(1),reverse=True)
+
+print(Sorted_dic)
   
 
 f.close()
